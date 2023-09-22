@@ -1,9 +1,11 @@
+---
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: replca-demo
   labels:
     name: demo
+  namespace: dev  
 spec:
   minReadySeconds: 5
   replicas: 4
