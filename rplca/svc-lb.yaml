@@ -3,13 +3,11 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    name: demo
-  namespace: dev  
+    name: demo 
 spec:
   type: LoadBalancer
   selector:
     name: demo
   ports:
-    - targetPort: 8080
-      port: 32000   
+    - targetPort: 8080  
     
