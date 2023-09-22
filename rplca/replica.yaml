@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replca-demo
+  labels:
+    name: demo
+spec:
+  minReadySeconds: 5
+  replicas: 4
+  selector:
+    matchLabels:
+      name: demo
+  template:
+    metadata:
+      labels:
+        name: demo
+    spec:
+      containers:
+        - env:
+            - name: qt
+              value: learing 
+          image: suri1002/spc:latest
+          name: spc
+          ports:
+            - containerPort: 8080
+              protocol: TCP         
