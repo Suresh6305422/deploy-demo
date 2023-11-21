@@ -8,7 +8,7 @@ metadata:
     name: demo 
 spec:
   minReadySeconds: 5
-  replicas: 4
+  replicas: 10
   selector:
     matchLabels:
       name: demo
